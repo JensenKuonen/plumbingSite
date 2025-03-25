@@ -1,64 +1,86 @@
-/* General Reset */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    
-    background-color: #eeeeee; 
-    
-
+    background-color: #f4f4f4;
 }
 
-/* Skip Link */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    z-index: 100;
-    text-decoration: none;
-}
-.skip-link:focus {
-    top: 0;
-}
-
-/* Navigation */
-.nav-bar {
+/* Navbar container */
+.navbar {
     display: flex;
-    background: #333;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
-.nav-bar li {
-    margin: 0;
-    padding: 10px;
-}
-.nav-bar a {
+
+/* Navbar items */
+.nav-item {
     text-decoration: none;
     color: white;
-}
-.nav-bar a:hover {
-    color: #f0a500;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 20px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Gallery Grid */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+/* Underline effect */
+.nav-item::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #00ffcc;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
 }
-.image-grid img {
+
+/* Hover effect */
+.nav-item:hover {
+    color: #00ffcc;
+}
+
+.nav-item:hover::after {
     width: 100%;
-    border: 2px solid #ddd;
-    padding: 8px;
-    border-radius: 8px;
-    opacity: 0.8;
-    transition: opacity 0.3s, transform 0.3s;
 }
-.image-grid img:hover {
-    opacity: 1;
-    transform: scale(1.05);
+
+
+
+/* Page Header */
+header {
+    background: #0059b3;
+    color: white;
+    text-align: center;
+    padding: 50px 10px;
+    margin-top: 60px;
 }
+
+/* Content */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #004080;
+    color: white;
+    margin-top: 20px;
+}
+
